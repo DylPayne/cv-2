@@ -14,3 +14,20 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.bg1 {
+  background-color: #ffffff;
+  opacity: 1;
+  background-image: radial-gradient(
+    #000000 1.6500000000000001px,
+    #ffffff 1.6500000000000001px
+  );
+  background-size: 33px 33px;
+}
+
+.bg2 {
+  background-color: #000000;
+  opacity: 1;
+  background-image: radial-gradient(#ffffff 0.65px, #000000 0.65px);
+  background-size: 33px 33px;
+}
