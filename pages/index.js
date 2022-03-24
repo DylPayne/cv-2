@@ -1,6 +1,8 @@
 import Head from "next/head";
 import { useWindowScroll } from "@mantine/hooks";
 import { useMediaQuery } from "react-responsive";
+import emailjs from "@emailjs/browser";
+// import { useRef } from "react";
 
 import {
   AppShell,
@@ -15,6 +17,7 @@ import {
   Badge,
   TextInput,
   Textarea,
+  InputWrapper,
 } from "@mantine/core";
 import {
   BrandGithub,
@@ -28,11 +31,49 @@ import {
   Paperclip,
   Send,
 } from "tabler-icons-react";
+import { useForm } from "@mantine/hooks";
+import { useRef } from "react";
 
 export default function Home() {
   const [scroll, scrollTo] = useWindowScroll();
 
   const isTabletOrMobile = useMediaQuery({ maxWidth: 1000 });
+
+  const form = useForm({
+    initialValues: {
+      email: "",
+      name: "",
+      subject: "",
+      message: "",
+    },
+
+    validate: {
+      email: (value) => (/^\S+@\S+$/.test(value) ? null : "Invalid email"),
+    },
+  });
+
+  const formRef = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    console.log("Sending...");
+    emailjs
+      .sendForm(
+        "service_js4chue",
+        "template_h3ih17x",
+        formRef.current,
+        "user_AvdqkQRo1Tj2mPGvjiX7N"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          console.log("Sent!");
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
 
   return (
     <MantineProvider theme={{ colorScheme: "dark" }}>
@@ -44,16 +85,26 @@ export default function Home() {
         header={
           <header
             style={{
-              height: 50,
+              height: isTabletOrMobile ? 100 : 50,
               display: "flex",
-              alignItems: "center",
+              flexDirection: isTabletOrMobile ? "column" : "row",
+              alignItems: isTabletOrMobile ? "unset" : "center",
               backgroundColor: "black",
               paddingLeft: 20,
               paddingRight: 20,
-              justifyContent: "space-between",
+              justifyContent: isTabletOrMobile
+                ? "space-around"
+                : "space-between",
             }}
           >
-            <div style={{ width: "100%" }}>
+            <div
+              style={{
+                width: "100%",
+                // border: "1px solid white",
+                display: "flex",
+                justifyContent: isTabletOrMobile ? "center" : "unset",
+              }}
+            >
               <Text
                 component="span"
                 align="center"
@@ -70,7 +121,14 @@ export default function Home() {
                 DYLAN PAYNE
               </Text>
             </div>
-            <div style={{ display: "flex" }}>
+            <div
+              style={{
+                display: "flex",
+                // border: "1px solid white",
+                justifyContent: "space-around",
+                alignItems: "center",
+              }}
+            >
               <Badge
                 variant="gradient"
                 gradient={{ from: "teal", to: "lime", deg: 105 }}
@@ -143,7 +201,7 @@ export default function Home() {
           order={1}
           align="center"
           style={{
-            fontSize: 100,
+            fontSize: isTabletOrMobile ? 40 : 100,
             fontStretch: "150%",
             backgroundColor: "black",
             color: "white",
@@ -325,10 +383,11 @@ export default function Home() {
             order={1}
             align="center"
             style={{
-              fontSize: 100,
+              fontSize: isTabletOrMobile ? 40 : 100,
               fontStretch: "150%",
               color: "white",
               marginTop: 50,
+              paddingTop: 30,
             }}
           >
             FREELANCER
@@ -455,7 +514,7 @@ export default function Home() {
           order={1}
           align="center"
           style={{
-            fontSize: 100,
+            fontSize: isTabletOrMobile ? 40 : 100,
             fontStretch: "150%",
             backgroundColor: "black",
             color: "white",
@@ -486,50 +545,61 @@ export default function Home() {
             }}
           >
             <div style={{ padding: 30, backgroundColor: "black" }}>
-              <TextInput
-                placeholder="Your email"
-                label="Email Address"
-                required
-                radius={0}
-                icon={<Mail size={16} />}
-              />
-              <Space h="lg" />
-              <TextInput
-                placeholder="Your name"
-                label="Full Name"
-                // required
-                radius={0}
-                icon={<UserCircle size={16} />}
-                required
-              />
-              <Space h="lg" />
-              <TextInput
-                placeholder="Subject"
-                label="Subject"
-                // required
-                radius={0}
-                icon={<Paperclip size={16} />}
-                required
-              />
-              <Space h="lg" />
-              <Textarea
-                placeholder="Your message"
-                label="Message"
-                required
-                radius={0}
-                minRows={5}
-                autosize
-              />
-              <Space h="lg" />
-              <Button
-                variant="gradient"
-                gradient={{ from: "pink", to: "grape", deg: 105 }}
-                radius={0}
-                fullWidth
-                leftIcon={<Send size={16} />}
-              >
-                Send
-              </Button>
+              <form onSubmit={sendEmail} ref={formRef}>
+                <TextInput
+                  placeholder="Your email"
+                  label="Email Address"
+                  name="email"
+                  required
+                  radius={0}
+                  icon={<Mail size={16} />}
+                  {...form.getInputProps("email")}
+                />
+                <Space h="lg" />
+                <TextInput
+                  placeholder="Your name"
+                  label="Full Name"
+                  name="name"
+                  // required
+                  radius={0}
+                  icon={<UserCircle size={16} />}
+                  required
+                  {...form.getInputProps("name")}
+                />
+                <Space h="lg" />
+                <TextInput
+                  placeholder="Subject"
+                  label="Subject"
+                  name="subject"
+                  // required
+                  radius={0}
+                  icon={<Paperclip size={16} />}
+                  required
+                  {...form.getInputProps("subject")}
+                />
+                <Space h="lg" />
+                <Textarea
+                  placeholder="Your message"
+                  label="Message"
+                  name="message"
+                  required
+                  radius={0}
+                  minRows={5}
+                  autosize
+                  {...form.getInputProps("message")}
+                />
+                <Space h="lg" />
+                <Button
+                  variant="gradient"
+                  gradient={{ from: "pink", to: "grape", deg: 105 }}
+                  radius={0}
+                  fullWidth
+                  leftIcon={<Send size={16} />}
+                  type="submit"
+                >
+                  Send
+                </Button>
+              </form>
             </div>
           </div>
         </div>
@@ -540,6 +610,7 @@ export default function Home() {
             marginLeft: -16,
             marginRight: -16,
             marginBottom: -16,
+            padding: 30,
             height: 200,
             display: "flex",
             justifyContent: "center",
