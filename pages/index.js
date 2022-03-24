@@ -243,11 +243,11 @@ export default function Home() {
               Hi there,
             </Title>
             <Title order={1} style={{ fontStretch: "130%" }}>
-              I'm Dylan
+              I&apos;m Dylan
             </Title>
             <Space h="md" />
             <Text size="lg">
-              I'm a full stack web developer. I love working with Next.js,
+              I&apos;m a full stack web developer. I love working with Next.js,
               Firebase and Supabase. I also have experience in many other
               languages, including SQL, Java, Python, PHP and more.
             </Text>
@@ -352,8 +352,8 @@ export default function Home() {
             </Title>
             <Space h="md" />
             <Text size="lg">
-              I've used Supabase, Firebase and Node (Express) in the past. I can
-              build you anything from an e-commerce site to a simple blog.
+              I&apos;ve used Supabase, Firebase and Node (Express) in the past.
+              I can build you anything from an e-commerce site to a simple blog.
             </Text>
             <Space h="xl" />
             <div style={{ width: "40%", height: 50 }}>
@@ -619,7 +619,7 @@ export default function Home() {
           className="bg2"
         >
           <Text color="white" size="xl">
-            Thanks for considering employing me! If I didn't meet your
+            Thanks for considering employing me! If I didn&apos;t meet your
             requirments, I wish you the best in finding your perfect match.
           </Text>
         </div>
