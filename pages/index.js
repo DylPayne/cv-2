@@ -306,9 +306,24 @@ export default function Home() {
             </Title>
             <Space h="md" />
             <Text size="lg">
-              I&apos;m a full stack web developer. My main strengths are in
-              React and Node.js, but I have some experience in a wide range of
-              technologies, including ASP.NET, Python, Angular and more.
+              I am a 21-year-old hard-working individual who went to Wynber Boys
+              High School. I am passionate about surfing, rugby, and trail
+              running, and I love to spend my free time watching these sports or
+              participating in them. I am also a very hard worker with a good
+              work ethic, and I enjoy working around like-minded people.{" "}
+            </Text>
+            <br />
+            <Text size="lg">
+              I am a valuable asset to any team, and my dedication and
+              determination are sure to lead to success. I am a team player who
+              is always willing to help out, and I am always looking for ways to
+              improve my skills and knowledge.{" "}
+            </Text>
+            <br />
+            <Text size="lg">
+              I am a bright and motivated individual with a bright future ahead
+              of me. I am sure to achieve great things in whatever I set my mind
+              to.
             </Text>
             <Space h="xl" />
             <div style={{ width: "40%" }}>
