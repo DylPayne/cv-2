@@ -329,7 +329,8 @@ export default function Home() {
               I am a bright and motivated individual with a bright future ahead
               of me. I am sure to achieve great things in whatever I set my mind
               to. I studied full stack development and software engineering and
-              qualified as one of the best in my class.
+              qualified as one of the best in my class. My results can be viewed{" "}
+              <a href="https://www.hyperiondev.com/portfolio/66631/">here</a>.
             </Text>
             <Space h="xl" />
             <div style={{ width: "40%" }}>
@@ -597,6 +598,7 @@ export default function Home() {
             backgroundColor: "black",
             color: "white",
           }}
+          id="contactForm"
         >
           CONTACT ME
         </Title>
@@ -622,7 +624,6 @@ export default function Home() {
               // marginRight: 50,
             }}
             ref={ref}
-            id="contactForm"
           >
             <div
               style={{ padding: 30, backgroundColor: "black" }}
