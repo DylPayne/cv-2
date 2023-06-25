@@ -310,6 +310,7 @@ export default function Home() {
               I&apos;m Dylan
             </Title>
             <Space h="md" />
+
             <Text size="lg">
               I am a 21-year-old hard-working individual who went to Wynberg
               Boys High School. I am passionate about surfing, rugby, and trail
@@ -326,11 +327,33 @@ export default function Home() {
             </Text>
             <br />
             <Text size="lg">
+              I have traveled and worked overseas, and I am now ready to settle
+              into my career as a software developer. I am a valuable asset to
+              any team, and my dedication and determination are sure to lead to
+              success. I am a team player who is always willing to help out, and
+              I am always looking for ways to improve my skills and knowledge.
+            </Text>
+            <br />
+            <Text size="lg">
               I am a bright and motivated individual with a bright future ahead
               of me. I am sure to achieve great things in whatever I set my mind
               to. I studied full stack development and software engineering and
               qualified as one of the best in my class. My results can be viewed{" "}
               <a href="https://www.hyperiondev.com/portfolio/66631/">here</a>.
+            </Text>
+            <br />
+            <Text size="lg">
+              I am excited to start my career as a software developer, and I am
+              confident that I can make a significant contribution to any team.
+              I am looking for a challenging and rewarding position where I can
+              use my skills and knowledge to make a difference.
+            </Text>
+            <br />
+            <Text size="lg">
+              I believe in loyalty, honesty, and dedication. I am committed to
+              my work, and I will always put the interests of my company first.
+              I am a team player, and I am always willing to go the extra mile.
+              I am confident that I can be a valuable asset to your team.
             </Text>
             <Space h="xl" />
             <div style={{ width: "40%" }}>
@@ -475,7 +498,7 @@ export default function Home() {
               paddingTop: 30,
             }}
           >
-            FREELANCER
+            SOFTWARE ENGINEER
           </Title>
           <div
             className="bg2"
