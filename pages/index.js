@@ -2,7 +2,6 @@ import Head from "next/head";
 import { useWindowScroll } from "@mantine/hooks";
 import { useMediaQuery } from "react-responsive";
 import emailjs from "@emailjs/browser";
-// import { useRef } from "react";
 
 import {
   AppShell,
@@ -69,6 +68,12 @@ const useWindowSize = () => {
 
 export default function Home() {
   const [scroll, scrollTo] = useWindowScroll();
+
+  const ref = useRef(null);
+  const executeScroll = () => {
+    ref.current.scrollIntoView({ behavior: "smooth" });
+    console.log("Scrolling...");
+  };
 
   // const isTabletOrMobile = useMediaQuery({ maxWidth: 1000 });
   const size = useWindowSize();
@@ -334,6 +339,7 @@ export default function Home() {
                 compact
                 fullWidth
                 radius={0}
+                onClick={executeScroll}
               >
                 Get in touch
               </Button>
@@ -393,6 +399,7 @@ export default function Home() {
                 compact
                 fullWidth
                 radius={0}
+                onClick={executeScroll}
               >
                 Get in touch
               </Button>
@@ -439,6 +446,7 @@ export default function Home() {
                 compact
                 fullWidth
                 radius={0}
+                onClick={executeScroll}
               >
                 Get in touch
               </Button>
@@ -613,6 +621,8 @@ export default function Home() {
               width: "90%",
               // marginRight: 50,
             }}
+            ref={ref}
+            id="contactForm"
           >
             <div
               style={{ padding: 30, backgroundColor: "black" }}
