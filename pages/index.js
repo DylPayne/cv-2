@@ -306,8 +306,8 @@ export default function Home() {
             </Title>
             <Space h="md" />
             <Text size="lg">
-              I am a 21-year-old hard-working individual who went to Wynber Boys
-              High School. I am passionate about surfing, rugby, and trail
+              I am a 21-year-old hard-working individual who went to Wynberg
+              Boys High School. I am passionate about surfing, rugby, and trail
               running, and I love to spend my free time watching these sports or
               participating in them. I am also a very hard worker with a good
               work ethic, and I enjoy working around like-minded people.{" "}
@@ -323,7 +323,8 @@ export default function Home() {
             <Text size="lg">
               I am a bright and motivated individual with a bright future ahead
               of me. I am sure to achieve great things in whatever I set my mind
-              to.
+              to. I studied full stack development and software engineering and
+              qualified as one of the best in my class.
             </Text>
             <Space h="xl" />
             <div style={{ width: "40%" }}>
@@ -613,7 +614,10 @@ export default function Home() {
               // marginRight: 50,
             }}
           >
-            <div style={{ padding: 30, backgroundColor: "black" }}>
+            <div
+              style={{ padding: 30, backgroundColor: "black" }}
+              id="contact-form"
+            >
               <form onSubmit={sendEmail} ref={formRef}>
                 <TextInput
                   placeholder="Your email"
