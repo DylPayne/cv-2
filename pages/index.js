@@ -312,41 +312,39 @@ export default function Home() {
             <Space h="md" />
 
             <Text size="lg">
-              I am a 21-year-old hard-working individual who went to Wynberg
-              Boys High School. I am passionate about surfing, rugby, and trail
-              running, and I love to spend my free time watching these sports or
-              participating in them. I am also a very hard worker with a good
-              work ethic, and I enjoy working around like-minded people.{" "}
+              I am a 21-year-old hard-working individual who matriculated at
+              Wynberg Boys High School. I am passionate about surfing, rugby,
+              and trail running, and I love to spend my free time watching these
+              sports or participating in them. I have good work ethic, and
+              thrive in an environment working with like-minded people around
+              me.{" "}
             </Text>
             <br />
             <Text size="lg">
-              I am a valuable asset to any team, and my dedication and
-              determination are sure to lead to success. I am a team player who
-              is always willing to help out, and I am always looking for ways to
-              improve my skills and knowledge.{" "}
+              I would be a valuable asset to any team because of my dedication
+              and determination as well as a willingness to help out wherever
+              possible. I am also always looking for ways to improve my skills
+              and knowledge.{" "}
             </Text>
             <br />
             <Text size="lg">
               I have traveled and worked overseas, and I am now ready to settle
-              into my career as a software developer. I am a valuable asset to
-              any team, and my dedication and determination are sure to lead to
-              success. I am a team player who is always willing to help out, and
-              I am always looking for ways to improve my skills and knowledge.
+              into my career as a software developer.
             </Text>
             <br />
             <Text size="lg">
-              I am a bright and motivated individual with a bright future ahead
-              of me. I am sure to achieve great things in whatever I set my mind
-              to. I studied full stack development and software engineering and
-              qualified as one of the best in my class. My results can be viewed{" "}
+              I consider myself a bright and motivated individual with a
+              successful future ahead of me. I studied full stack development
+              and software engineering and qualified as one of the best in my
+              class. My results can be viewed{" "}
               <a href="https://www.hyperiondev.com/portfolio/66631/">here</a>.
             </Text>
             <br />
             <Text size="lg">
-              I am excited to start my career as a software developer, and I am
-              confident that I can make a significant contribution to any team.
-              I am looking for a challenging and rewarding position where I can
-              use my skills and knowledge to make a difference.
+              I am excited to progress my career as a software developer, and I
+              am confident that I can make a significant contribution to any
+              team. I am looking for a challenging and rewarding position where
+              I can use my skills and knowledge to make a difference.
             </Text>
             <br />
             <Text size="lg">
