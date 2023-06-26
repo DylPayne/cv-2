@@ -313,11 +313,11 @@ export default function Home() {
 
             <Text size="lg">
               I am a 21-year-old hard-working individual who matriculated at
-              Wynberg Boys High School. I am passionate about surfing, rugby,
-              and trail running, and I love to spend my free time watching these
-              sports or participating in them. I have good work ethic, and
-              thrive in an environment working with like-minded people around
-              me.{" "}
+              Wynberg Boys High School in 2020. When not working, I am
+              passionate about surfing, skiing, rugby, and trail running, I love
+              to spend what free time I have either participating in or watching
+              these sports. I have great work ethic, and thrive in an
+              environment working with like-minded people around me.{" "}
             </Text>
             <br />
             <Text size="lg">
@@ -328,30 +328,29 @@ export default function Home() {
             </Text>
             <br />
             <Text size="lg">
-              I have traveled and worked overseas, and I am now ready to settle
-              into my career as a software developer.
+              I have traveled and worked overseas for the past 6 months, and I
+              am now looking forward to settling into a career in software
+              development.
             </Text>
             <br />
             <Text size="lg">
-              I consider myself a bright and motivated individual with a
-              successful future ahead of me. I studied full stack development
-              and software engineering and qualified as one of the best in my
-              class. My results can be viewed{" "}
+              I consider myself an outgoing and motivated individual with a
+              promising future ahead of me. I studied full stack development and
+              software engineering and qualified as one of the best in my class.
+              My results can be viewed{" "}
               <a href="https://www.hyperiondev.com/portfolio/66631/">here</a>.
             </Text>
             <br />
             <Text size="lg">
-              I am excited to progress my career as a software developer, and I
-              am confident that I can make a significant contribution to any
+              I am excited to progress my career as a software developer, and am
+              confident that I would make a significant contribution to any
               team. I am looking for a challenging and rewarding position where
               I can use my skills and knowledge to make a difference.
             </Text>
             <br />
             <Text size="lg">
-              I believe in loyalty, honesty, and dedication. I am committed to
-              my work, and I will always put the interests of my company first.
-              I am a team player, and I am always willing to go the extra mile.
-              I am confident that I can be a valuable asset to your team.
+              I am committed to my work and I am confident that I can be a
+              valuable asset to your team.
             </Text>
             <Space h="xl" />
             <div style={{ width: "40%" }}>
@@ -402,10 +401,10 @@ export default function Home() {
               {"  "}FRONT-END
             </Text>
             <Title order={2} style={{ fontStretch: "130%" }}>
-              React
+              Angular
             </Title>
             <Title order={1} style={{ fontStretch: "130%" }}>
-              Next.js
+              React
             </Title>
             <Space h="md" />
             <Text size="lg">
@@ -449,10 +448,10 @@ export default function Home() {
               {"  "}BACK-END
             </Text>
             <Title order={2} style={{ fontStretch: "130%" }}>
-              Firebase,
+              Node.js,
             </Title>
             <Title order={1} style={{ fontStretch: "130%" }}>
-              Supabase, Node
+              ASP.NET, Firebase
             </Title>
             <Space h="md" />
             <Text size="lg">
